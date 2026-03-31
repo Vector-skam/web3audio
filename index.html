@@ -57,5 +57,45 @@
             status.innerText = "Сейчас играет: 2-534381...fEJCobup.mp3";
         };
     </script>
+    <style>
+        /* Стили для контейнера (блока) */
+        #card-container {
+            width: 350px;
+            padding: 15px;
+            background: #1a1a1a; /* Темный фон как в плеере */
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        /* Стили для самой картинки внутри блока */
+        #web3-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Тот самый блок (контейнер) -->
+    <div id="card-container"></div>
+
+    <script>
+        // Ссылка на ваше изображение
+        const imgUrl = "https://raw.githubusercontent.com/Vector-skam/web3audio/refs/heads/main/Screenshot_2026-03-31-08-58-37-135-edit_com.miui.gallery.jpg";
+
+        // Создаем элемент изображения
+        const img = document.createElement('img');
+        img.src = imgUrl;
+        img.id = "web3-image";
+        img.alt = "Web3Audio Screenshot";
+
+        // Выводим картинку в блок
+        const container = document.getElementById('card-container');
+        container.appendChild(img);
+    </script>
 </body>
 </html>
